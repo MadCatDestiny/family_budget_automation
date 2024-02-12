@@ -34,12 +34,9 @@ def filter_excel(file_path, month, year,config):
                 df = df.dropna(subset=[col])
     df['Description'] = df['Description'] + '\n' + df['Additional Information']
 
-
     # Выборка определенных полей
     df = df[['Date','Currency', 'Paid Out', 'Description']]
     df = df.astype(str)
-    # print(df.dtypes)
-
 
     return df,currency
 
